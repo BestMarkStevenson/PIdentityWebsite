@@ -197,44 +197,10 @@
             width: 100%;
         }
 
-        #how-it-works {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            background-color: #34495e;
-            /* Darker blue-gray */
-            padding: 15px;
-            /* Reduced padding */
-            border-radius: 12px;
-            /* Rounded corners */
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-            /* Softer shadow */
-            width: 270px;
-            /* Adjusted width */
-            text-align: left;
-            font-size: 14px;
-            /* Adjusted font size */
-            color: #ecf0f1;
-            /* Light text */
-            border: 2px solid #1abc9c;
-            /* Teal border */
+        .how-it-works {
+            margin-top: 40px;
         }
 
-        #how-it-works h3 {
-            font-size: 18px;
-            margin-top: 0;
-            color: #1abc9c;
-            /* Teal */
-            font-weight: bold;
-            /* Bold text */
-        }
-
-        #how-it-works p {
-            margin: 5px 0;
-            /* Adjusted margin */
-            line-height: 1.5;
-            /* Better line spacing */
-        }
     </style>
 </head>
 
@@ -247,6 +213,12 @@
             <p>3. Watch the shape draw and see how close it gets to π.</p>
             <p>4. More sides = Closer to π!</p>
             <p class="warning">Max sides: 10,000.</p>
+            <div class="how-it-works">
+                <h2>How It Works</h2>
+                <p>The area of the circle is between the areas of the inscribed and circumscribed shapes.</p>
+                <p>As the number of sides increase, the shapes look more and more like circles and the areas are closer to a circle which approximates π.</p>
+                <p>The circle has a radius of 1. Its area is equal to πr² which is π.</p>
+            </div>
         </div>
         <div id="canvas-container">
             <h1>PIdentity</h1>
@@ -256,21 +228,14 @@
                 <button onclick="drawShapes()">Calculate</button>
             </div>
             <div id="result" class="result">π Approximation: 2.98765432 < π < 3.14159265</div>
-                    <canvas id="canvas" width="700" height="600"></canvas>
-            </div>
-            <div id="history">
-                <h2>History</h2>
-                <div id="history-log"></div>
-            </div>
+            <canvas id="canvas" width="700" height="600"></canvas>
         </div>
-        <div id="how-it-works">
-            <h3>How It Works</h3>
-            <p>The area of the circle is between the areas of the inscribed and circumscribed shapes.</p>
-            <p>As the number of sides increase, the shapes look more and more like cirlces and the areas are closer to a
-                circle which approximates π.</p>
-            <p> The circle has a radius of 1. Its area is equal to πr^2 which is π.</p>
+        <div id="history">
+            <h2>History</h2>
+            <div id="history-log"></div>
         </div>
-        <script src="script.js"></script>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
